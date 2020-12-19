@@ -2,7 +2,7 @@ import React from "react";
 import "./Productlist.css";
 
 export default function Productlist(props) {
-  const { product_image, title, discount } = props;
+  const { product_image, title, discount } = props;//destructuring of props object
 
   return (
     <div className="container">
