@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Productlist from "./component/Productlist";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    products: []
+  };
+
+  componentDidMount() {
+    fetch("https://demo0260216.mockable.io/products_get")
+      .then((response) => response.json())
+      .then((data) => {
+        this.setState({ products: data });
+      });
+  }
+
+  render() {
+    return (
+      <ul>
+        {this.state.products.map((product) => (
+          <Productlist
+            product_image={product.image}
+            discount={product.promoMessage}
+            title={product.title}
+          />
+        ))}
+      </ul>
+    );
+  }
 }
-
 export default App;

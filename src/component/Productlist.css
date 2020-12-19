@@ -1,0 +1,27 @@
+.container {
+    border: 1px solid gray;
+    margin: 2px;
+  }
+  
+  .discount {
+    background-color: red;
+    position: absolute;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+  }
+  
+  .title {
+    position: absolute;
+    margin: 1opx;
+  }
+  
+  .btn {
+    position: absolute;
+    right: 15px;
+    top: 120px;
+    background-color: blue;
+    color: white;
+    padding: 10px;
+  }
+  
