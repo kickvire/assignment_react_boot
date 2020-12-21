@@ -9,6 +9,7 @@ export default function Productlist(props) {
       <span className="discount">{discount}</span>
       <img className="laptop" src={product_image} alt="laptop" />
       <span className="title">{title}</span>
+      <button >full deatails</button>
      
     </div>
   );
